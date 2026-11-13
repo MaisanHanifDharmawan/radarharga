@@ -1,0 +1,41 @@
+[api]
+enabled = true
+
+[db]
+port = 54322
+major_version = 15
+
+[functions.ingest-prices]
+enabled = true
+verify_jwt = false
+entrypoint = "supabase/functions/ingest-prices/index.ts"
+
+[functions.ingest-trends]
+enabled = true
+verify_jwt = false
+entrypoint = "supabase/functions/ingest-trends/index.ts"
+
+[functions.evaluate-alerts]
+enabled = true
+verify_jwt = false
+entrypoint = "supabase/functions/evaluate-alerts/index.ts"
+
+[functions.dispatch-notifications]
+enabled = true
+verify_jwt = false
+entrypoint = "supabase/functions/dispatch-notifications/index.ts"
+
+[functions.subscribe]
+enabled = true
+verify_jwt = false
+entrypoint = "supabase/functions/subscribe/index.ts"
+
+[functions.verify-subscription]
+enabled = true
+verify_jwt = false
+entrypoint = "supabase/functions/verify-subscription/index.ts"
+
+[functions.unsubscribe]
+enabled = true
+verify_jwt = false
+entrypoint = "supabase/functions/unsubscribe/index.ts"

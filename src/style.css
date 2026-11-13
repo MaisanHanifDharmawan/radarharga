@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Token desain & font dimuat SETELAH tailwind supaya menang atas preflight */
+@import "./styles/fonts.css";
+@import "./styles/tokens.css";
+
+@layer components {
+  /* Skala tipografi DESIGN.md §3.2 */
+  .text-h1 { @apply text-[32px] md:text-[52px]; }
+  .text-h2 { @apply text-[24px] md:text-[32px]; }
+  .text-body { @apply text-[16px]; }
+  .text-small { @apply text-[14px]; }
+
+  .btn-utama {
+    @apply inline-flex min-h-[48px] items-center rounded-kontrol bg-tinta px-5 font-isi font-700 text-[15px] text-kertas;
+  }
+  .btn-sekunder {
+    @apply inline-flex min-h-[48px] items-center rounded-kontrol border-2 border-tinta px-5 font-isi font-700 text-[15px] text-tinta;
+  }
+  .input-kontrol {
+    @apply min-h-[48px] rounded-kontrol border border-garis bg-white px-3 font-isi text-[15px] text-tinta;
+  }
+}

@@ -1,0 +1,54 @@
+/* Token desain — salin dari AGENTS.md §11 (mengikat) */
+:root {
+  --kertas: #F8FAF7;
+  --tinta: #12233B;
+  --tinta-muda: #4B5B6E;
+  --karton: #FFD84D;
+  --cabai: #C4122F;
+  --cabai-di-karton: #A50F28;
+  --daun: #12703F;
+  --daun-di-karton: #0F6B3A;
+  --garis: #D5DBD3;
+
+  --font-angka: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-isi: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --radius-chip: 2px;
+  --radius-kontrol: 8px;
+  --radius-panel: 12px;
+
+  --bayangan-papan: 6px 6px 0 var(--tinta);
+}
+
+body {
+  background: var(--kertas);
+  color: var(--tinta);
+  font-family: var(--font-isi);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.angka {
+  font-family: var(--font-angka);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Fokus keyboard selalu terlihat (§9) */
+:focus-visible {
+  outline: 3px solid var(--tinta);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Harga naik/turun — selalu bersama tanda arah (▲/▼, +/−) */
+.naik { color: var(--cabai); }
+.turun { color: var(--daun); }
+.naik-di-karton { color: var(--cabai-di-karton); }
+.turun-di-karton { color: var(--daun-di-karton); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
